@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alternative Medicine Appointment Scheduler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      /* Add mobile-specific styles here, such as font-size adjustments and padding */
+      /* Make sure to also adjust the CSS for smaller screens */
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #E5E5E5;
+      }
+
+      /* Adjust font size for smaller screens */
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.5em;
+        }
+        label, input[type="text"], input[type="tel"], input[type="date"], input[type="time"] {
+          font-size: 1em;
+        }
+        input[type="submit"] {
+          font-size: 1em;
+        }
+      }
+
+      h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #4CAF50;
+      }
+
+      form {
+        background-color: #f2f2f2;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow:2px 2px 2px #888888;
+margin: 0 auto;
+width: 90%; /* changed to 90% to fit smaller screens */
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+        /* Add margin and padding for smaller screens */
+  @media (max-width: 600px) {
+    form {
+      padding: 5px;
+      margin: 5px;
+    }
+  }
+
+  label {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-right: 10px;
+    width: 100%; /* changed to 100% to fit smaller screens */
+    text-align: left;
+  }
+
+  /* Add margin and padding for smaller screens */
+  @media (max-width: 600px) {
+    label {
+      margin-right: 0;
+    }
+  }
+
+  input[type="text"], input[type="tel"], input[type="date"], input[type="time"] {
+    padding: 12px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    width: 100%; /* changed to 100% to fit smaller screens */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  /* Add margin and padding for smaller screens */
+@media (max-width: 600px) {
+    form {
+      padding: 5px;
+      margin: 5px;
+    }
+  }
+
+  label {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-right: 10px;
+    width: 100%; /* changed to 100% to fit smaller screens */
+    text-align: left;
+  }
+
+  /* Add margin and padding for smaller screens */
+  @media (max-width: 600px) {
+    label {
+      margin-right: 0;
+    }
+  }
+
+  input[type="text"], input[type="tel"], input[type="date"], input[type="time"] {
+    padding: 12px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    width: 100%; /* changed to 100% to fit smaller screens */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  /* Add margin and padding for smaller screens */
+      @media (max-width: 600px) {
+input[type="text"], input[type="tel"], input[type="date"], input[type="time"] {
+margin: 5px 0;
+padding: 5px;
+}
+}
+
+input[type="submit"] {
+width: 100%; /* changed to 100% to fit smaller screens */
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+/* Add margin and padding for smaller screens */
+@media (max-width: 600px) {
+input[type="submit"] {
+margin: 5px 0;
+padding: 5px;
+}
+}
+
+input[type="submit"]:hover {
+background-color: #45a049;
+}
+
+a {
+color: #4CAF50;
+text-decoration: none;
+font-size: 1.2em;
+}
+
+a:hover {
+color: #3e8e41;
+}
+color: #3e8e41;
+}
+
+
+
+/* ... */
+      </style>
+
+  </head>
+  <body>
+    <h1> Asayel Alternative Medicine  </h1>
+
+    <form action="{{ url_for('schedule') }}" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required><br>
+    <br>
+
+      <style>
+  .time-block {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+  }
+</style>
+
+<div>
+  <div class="time" onclick="selectTime(this)">9:00am</div>
+  <div class="time" onclick="selectTime(this)">10:30am</div>
+  <div class="time" onclick="selectTime(this)">12:00pm</div>
+  <div class="time" onclick="selectTime(this)">1:30pm</div>
+  <div class="time" onclick="selectTime(this)">3:00pm</div>
+  <div class="time" onclick="selectTime(this)">4:30pm</div>
+  <div class="time" onclick="selectTime(this)">6:00pm</div>
+  <div class="time" onclick="selectTime(this)">7:30pm</div>
+  <div class="time" onclick="selectTime(this)">9:00pm</div>
+</div>
+
+
+
+
+
+
+
+    <input type="submit" value="Schedule">
+</form>
+
+    <br>
+    <!--<a href="{{ url_for('view') }}">View Appointments</a>-->
+   </form>
+
+
+
+
+
+</body>
+
+</html>
